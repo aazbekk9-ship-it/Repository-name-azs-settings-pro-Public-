@@ -1,0 +1,51 @@
+🎯 BUTTON — ${v[6]}
+📱 DPI — ${v[7]}`;
+
+
+    try{
+
+        await navigator
+        .clipboard
+        .writeText(text);
+
+    }catch(error){
+
+        const textarea =
+        document.createElement("textarea");
+
+        textarea.value = text;
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+
+        document.execCommand("copy");
+
+        textarea.remove();
+    }
+
+
+    alert("✅ Настройка көшірілді!");
+}
+
+
+/* =========================
+   BACK
+========================= */
+
+function goBack(){
+
+    document
+    .getElementById("resultPage")
+    .style.display = "none";
+
+
+    document
+    .getElementById("mainPage")
+    .style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
